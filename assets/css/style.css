@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+* {
+  outline: none;
+  box-sizing: border-box;
+}
 
 body {
   background-image: linear-gradient(0deg,
       rgba(247, 247, 247, 1) 23.8%,
       rgba(244, 223, 208, 1) 92%);
-  font-family: 'Petit Formal Script', cursive;
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   height: 100vh;
   display: flex;
@@ -20,7 +25,7 @@ body {
   display: flex;
   padding: 20px 30px;
   position: relative;
-  margin: 50px 0;
+  margin: 100px 0;
   z-index: 10;
 }
 
@@ -64,7 +69,7 @@ body {
   }
 
   to {
-    transform: rotate(30deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -102,4 +107,30 @@ body {
   transform: translate(0%);
   transition: transform .3s ease-in, opacity .3s ease-in;
   z-index: 0;
+}
+
+.music-container.play .music-info {
+  opacity: 1;
+  transform: translateY(-100%);
+}
+
+.music-info h4 {
+  margin: 0;
+}
+
+.progress-container {
+  background-color: #fff;
+  border: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+.progress {
+  background-color: #FFBCBC;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  transform: width 0.1s linear;
 }
